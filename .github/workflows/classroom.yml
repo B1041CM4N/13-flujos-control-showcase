@@ -15,5 +15,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: "Running test in Python"
         run: |
+          echo "VERSION PYTHON: $(python --version)"
           ./tests/setup
           python -m pytest -v --import-mode=append tests/
