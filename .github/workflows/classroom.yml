@@ -13,3 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: "Running test in Python"
+        run: |
+          ./tests/setup
+          python -m pytest -v --import-mode=append tests/
