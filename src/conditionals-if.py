@@ -40,5 +40,4 @@ if(your_2nd_preference == "NO"):
 else:
   print("opción no reconocida")
 
-
 # ACTIVIDAD EXTRA: fijate que el codigo de las opciones hace que varias veces se repita lo mismo. crea una función para mejorar y reducir la complejidad del programa
