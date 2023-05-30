@@ -22,4 +22,4 @@ jobs:
 
       - name: Comprobación de versión de Python
         run: |
-              echo "::notice [** VERSION PYTHON: $(python --version) **]::"
+              echo "**#-- VERSION PYTHON: $(python --version) --#**"
