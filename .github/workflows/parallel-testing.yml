@@ -22,7 +22,5 @@ jobs:
 
       - name: Comprobación de versión de Python
         uses: actions/checkout@v2
-        with:
-          python-version: ${{ matrix.python-version }}
-          run: |
+        run: |
               echo "::notice [** VERSION PYTHON: $(python --version) **]::"
