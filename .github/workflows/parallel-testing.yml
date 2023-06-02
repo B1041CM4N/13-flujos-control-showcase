@@ -2,7 +2,7 @@ name: Parallel Testing
 
 on:
   push:
-    branches: [ patch-1 ]
+    branches: [ main ]
 
 jobs:
   test:
