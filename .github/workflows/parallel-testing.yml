@@ -30,10 +30,13 @@ jobs:
       
       - name: Ejecución de pruebas
         run: |
-              python -m pytest -v --import-mode=append tests/ --html=reports/report.html
+              python -m pytest -v --import-mode=append tests/ --html=reports/${{ matrix.python-version }}/report.html
       
       - name: Subir directorio
         uses: actions/upload-artifact@v3
         with:
           name: reportes
           path: reports/
+
+  publish-report:
+    runs-on: ubuntu-latest
