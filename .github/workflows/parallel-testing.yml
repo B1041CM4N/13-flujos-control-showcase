@@ -23,3 +23,11 @@ jobs:
       - name: Comprobación de versión de Python
         run: |
               echo "::notice:: **#-- VERSION PYTHON: $(python --version) --#**"
+
+      - name: Setup previo para pruebas
+        run: |
+              ./tests/setup
+      
+      - name: Ejecución de pruebas
+        run: |
+              python -m pytest -v --import-mode=append tests/
