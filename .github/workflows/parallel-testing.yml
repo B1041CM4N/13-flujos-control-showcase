@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.7, 3.8, 3.9]
+        python-version: [3.7, 3.8, 3.9] #Todas las definiciones a este nivel tienen que tener la misma cantidad de elementos
+        # node-version: [12.x, 14.x, 15.x]
 
     steps:
       - name: Checkout code
@@ -38,5 +39,15 @@ jobs:
           name: reportes
           path: reports/
 
-  #publish-report:
-  #  runs-on: ubuntu-latest
+  publish-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download report
+        uses: actions/download-artifact@v3
+        with:
+          name: reportes
+          path: python-reports/
+
+      - name: Mostrar reportes
+        run: |
+              tree python-reports/
