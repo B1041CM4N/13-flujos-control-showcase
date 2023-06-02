@@ -30,4 +30,10 @@ jobs:
       
       - name: Ejecución de pruebas
         run: |
-              python -m pytest -v --import-mode=append tests/
+              python -m pytest -v --import-mode=append tests/ --html=reports/report.html
+      
+      - name: Subir directorio
+        uses: actions/upload-artifact@v3
+        with:
+          name: reportes
+          path: reports/
