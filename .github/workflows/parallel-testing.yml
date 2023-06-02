@@ -41,6 +41,7 @@ jobs:
 
   publish-report:
     runs-on: ubuntu-latest
+    needs: test #consume al job anterior, sino se especifica corre en paralelo al resto
     steps:
       - name: Download report
         uses: actions/download-artifact@v3
